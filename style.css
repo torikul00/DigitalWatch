@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+html,body{
+    display: grid;
+    height: 100vh;
+   align-items: center;
+   justify-content: center;
+   background-color: black;
+}
+.wrapper .display,
+.wrapper span{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.wrapper{
+    width: 360px;
+    height:100px ;
+   background-image: linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+    border-radius: 10px;
+    position: relative;
+   
+    cursor: default;
+    animation: animate 1.5s linear infinite;
+}
+.display{
+    z-index:999;
+    background-color: black;
+    width: 345px;
+    height: 85px;
+    text-align: center;
+    line-height: 85px;
+    border-radius: 7px;
+}
+#time{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    animation: animate 1.5s linear infinite;
+
+}
+@keyframes animate {
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+    
+}
+.wrapper span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius: 10px;
+}
+.wrapper span:first-child{
+    filter: blur(20px);
+}
+.wrapper span:last-child{
+    filter: blur(20px);
+}
